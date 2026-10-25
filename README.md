@@ -40,7 +40,7 @@ Of 374 customers who churned, **276 were identified** and 98 were missed. Of 1,0
 
 ## Choosing the decision threshold
 
-In a retention campaign, missing a churner usually costs more than contacting a loyal customer, so the threshold can be lowered.
+In a retention campaign, missing a churner usually costs more than contacting a loyal customer, so the threshold can be lowered
 
 | Threshold | Precision | Recall | F1 | Customers flagged (of 1,409) |
 |---|---|---|---|---|

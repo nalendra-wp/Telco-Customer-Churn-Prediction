@@ -72,14 +72,15 @@ At 0.4, contacting 601 customers catches 82% of those who would churn, and about
 
 ## Limitations
 
-- **Single train/test split.** The best model is chosen on the same test set that is reported, so the results are slightly optimistic. Cross-validation or a separate validation set would be more rigorous.
-- **Model differences are tiny.** No statistical test was run, and the four models should be considered equivalent in ranking ability.
-- **Default hyperparameters.** No tuning was done.
-- **Threshold analysis is on the test set** and is meant to illustrate the trade-off, not to set a production threshold.
-- **22 rows are identical** once the customer ID is removed. They are kept, since customers with the same plan can legitimately look alike.
-- **Correlated features** (tenure, total charges, contract type) share importance, so permutation importance can understate each one.
-- **Observational data.** Associations are not causes.
+- **Single train/test split.** The best model was selected using the same test set used for evaluation, which may lead to slightly optimistic results. Cross-validation or a separate validation set would provide a more reliable assessment.
+- **Small model differences.** The performance differences between the four models were minimal. No statistical testing was conducted, so their ranking performance can be considered similar.
+- **Default hyperparameters.** All models were evaluated using their default settings, without additional hyperparameter tuning.
+- **Threshold analysis.** The threshold analysis was performed on the test set to demonstrate the trade-off between different metrics. It should not be used directly to determine the production threshold.
+- **Duplicate rows.** A total of 22 rows were identical after removing the customer ID. These rows were retained because customers with similar characteristics can naturally have the same data.
+- **Correlated features.** Features such as tenure, total charges, and contract type are correlated. As a result, permutation importance may underestimate the individual contribution of each feature.
+- **Observational data.** The findings reflect relationships between variables and should not be interpreted as evidence of causation.
 
+  
 ## Data
 
 - **Source:** [Telco Customer Churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn) on Kaggle (7,043 rows, 21 columns)
